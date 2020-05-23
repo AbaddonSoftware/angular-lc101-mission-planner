@@ -1,0 +1,10 @@
+.box {
+    margin: 5px;
+    padding: 10px 10px;
+    text-align: center;
+    border-style: groove;
+    border-color: greenyellow;
+    display: inline-flex;
+    padding: 10px;
+ }
+ 
