@@ -13,7 +13,12 @@ export class ExperimentsComponent implements OnInit {
   ngOnInit() {
   }
   add(experimentName: string) {
-    this.experiments.push({ name: experimentName });
+    if (!RegExp('^[ ]*$').test(experimentName)) {
+      this.experiments.push({ name: experimentName });
+    }
+    else {
+      alert("Entries consisting of only whitespace not permitted.");
+    }
   }
 
   remove(experiment: object) {
