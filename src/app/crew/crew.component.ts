@@ -21,7 +21,7 @@ export class CrewComponent implements OnInit {
   }
   add(memberName: string, isFirst: boolean) {
     let nameDoesNotExist: boolean = !this.crew.some((element, index, array) => element["name"] == memberName);
-    let nameIsValid = RegExp('^[a-zA-Z]+[ ]*$').test(memberName);
+    let nameIsValid = RegExp('^[a-zA-Z]+[ ]*[a-zA-Z ]+$').test(memberName);
     if (nameDoesNotExist && nameIsValid) {
       this.crew.push({ name: memberName, firstMission: isFirst });
     }
